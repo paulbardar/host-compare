@@ -3,6 +3,8 @@
 @import 'settings';
 @import 'foundation/foundation';
 
+@import url(https://fonts.googleapis.com/css?family=Raleway:400,600,300,700);
+
 @include foundation-global-styles;
 @include foundation-grid;
 @include foundation-typography;
@@ -10,43 +12,326 @@
 @include foundation-forms;
 @include foundation-visibility-classes;
 @include foundation-float-classes;
-@include foundation-accordion;
-@include foundation-accordion-menu;
-@include foundation-badge;
-@include foundation-breadcrumbs;
-@include foundation-button-group;
-@include foundation-callout;
-@include foundation-close-button;
-@include foundation-drilldown-menu;
-@include foundation-dropdown;
-@include foundation-dropdown-menu;
+// @include foundation-accordion;
+// @include foundation-accordion-menu;
+// @include foundation-badge;
+// @include foundation-breadcrumbs;
+// @include foundation-button-group;
+// @include foundation-callout;
+// @include foundation-close-button;
+// @include foundation-drilldown-menu;
+// @include foundation-dropdown;
+// @include foundation-dropdown-menu;
 @include foundation-flex-video;
 @include foundation-label;
 @include foundation-media-object;
 @include foundation-menu;
-@include foundation-off-canvas;
+// @include foundation-off-canvas;
 @include foundation-orbit;
-@include foundation-pagination;
-@include foundation-progress-bar;
-@include foundation-slider;
-@include foundation-sticky;
-@include foundation-reveal;
-@include foundation-switch;
+// @include foundation-pagination;
+// @include foundation-progress-bar;
+// @include foundation-slider;
+// @include foundation-sticky;
+// @include foundation-reveal;
+// @include foundation-switch;
 @include foundation-table;
-@include foundation-tabs;
-@include foundation-thumbnail;
+// @include foundation-tabs;
+// @include foundation-thumbnail;
 @include foundation-title-bar;
-@include foundation-tooltip;
+// @include foundation-tooltip;
 @include foundation-top-bar;
 
+$dark: #232d3d;
 
 /* Menu */
 
 .top-bar {
-	ul {
-		li {
-			a {
+	line-height: 80px;
+	.menu {
+		> li {
+			> a {
+				line-height: 80px;
+				color: #7f8388;
+				font-size: 12px;
+				font-family: $header-font-family;
+				&:hover {
+					color: $white;
+				}
+				&:active {
+					color: $primary-color;
+				}
 
+			}
+		}
+	}
+}
+
+button,
+[type="submit"],
+.button {
+	 @include button;
+	 width: 100px;
+	 line-height: 40px;
+	 min-height: 40px;
+	 box-shadow: 0 3px 0 darken($primary-color, 20%);
+	 &.success {
+	  box-shadow: 0 3px 0 darken( $success-color, 30%);
+	 }
+}
+@include breakpoint(medium) {
+	 .float-left-medium {
+	  float: left;
+	 }
+}
+
+// ba-cloud
+
+.ba-cloud {
+	background: $primary-color;
+	padding: 40px 0 60px;
+	position: relative;
+	.ba-cloud__title {
+		max-width: 746px;
+		color: $white;
+		margin: auto;
+		h2 {
+			text-align: center;
+			font-weight: 300;
+		}
+	}
+}
+
+
+@import "slick.scss";
+
+.ba-slider {
+	.ba-slide {
+		border: none;
+		outline: none;
+
+		.ba-cloud__img{
+			padding: 30px 0 35px;
+			img {
+				display: block;
+				margin: 0 auto;
+			}
+		}
+	}
+	.slick-arrow {
+		text-indent: -9999px;
+		top: 35%;
+		position: absolute;
+		z-index: 20;
+		min-width: 40px;
+		height: 40px;
+		border-radius: 50%;
+		outline: none;
+		box-shadow:none;
+		border: none;
+		background: no-repeat 50%;
+		@media (max-width:767px){
+			top: 450px;
+		}
+		&:focus{
+			opacity: 0.7;
+			outline: none;
+		}
+		&:active{
+			opacity: 0.5;
+			outline: none;
+		}
+		&:focus, &:active, &:hover {
+			width: 60px;
+			height: 60px;
+		}
+	}
+	.slick-prev{
+		background-image: url(../img/left.png);
+		left: -60px;
+		transform: scale(0.7);
+
+	}
+
+	.slick-next{
+		background-image: url(../img/right.png);
+		right: -60px;
+
+	}
+}
+
+.select-forms {
+	transform: translate(15%, 0);
+	.ba-select__pie,
+	.ba-select__icloud {
+		position: relative;
+		z-index: 1;
+		display: inline-block;
+		// background: #fff;
+		margin: 0 0 0;
+	}
+}
+.ba-select {
+	height: 51px;
+	box-shadow:0 2px 0 $medium-gray;
+	font-weight:700;
+	position: relative;
+	color: #898989;
+	padding-left: 50px;
+	padding-right: 20px;
+	background: url(../img/drop.svg) 265px 50% no-repeat #fff;
+
+}
+
+.ba-select__pie {
+	margin-right: 20px;
+	&:before {
+		content: "";
+		display: block;
+		width: 19px;
+		height: 19px;
+		position: absolute;
+		top: 15px;
+		left: 33px;
+		background: url(../img/chart_pie.png) 50% no-repeat;
+		z-index: 10;
+	}
+}
+.ba-select__icloud {
+	margin-right: 20px;
+	&:before {
+		content: "";
+		display: block;
+		width: 19px;
+		height: 19px;
+		position: absolute;
+		top: 15px;
+		left: 33px;
+		background: url(../img/icloud.png) 50% no-repeat;
+		z-index: 10;
+	}
+}
+.left-button-group {
+	margin: 30px auto 0;
+	width: 210px;
+	font-size: 0;
+	box-shadow:0 3px 0 #4aaaa5;
+	border-radius:5px;
+	@media #{breakpoint(medium)}{
+		position: absolute;
+		top: 20%;
+		left: 20px;
+		width: 70px;
+		margin: 0;
+	}
+	& .button {
+		font-size: 23px;
+		line-height: 23px;
+		padding: 0;
+		border: none;
+		box-shadow: none;
+		.ba-cloud__link {
+			display: block;
+			padding: 20px 0;
+			width: 70px;
+			transition: background .3s ease-in;
+			&:hover {
+				background: darken($secondary-color, 30%);
+			}
+		}
+		& .fa-comments {
+			background: #36aaa4;
+			border-radius:5px 0 0 0;
+			@media #{breakpoint(medium)} {
+				border-radius:5px 5px 0 0;
+			}
+		}
+		& .fa-envelope {
+			background: #80d3cf;
+		}
+		& .fa-heart {
+			background: #5dbab5;
+			border-radius:0 5px 0 0;
+			@media #{breakpoint(medium)} {
+				border-radius: 0 0 5px 5px;
+			}
+		}
+	}
+}
+.button-bottom {
+	text-align: center;
+	.button-cloud-bottom {
+		width: 300px;
+		margin-top: 4px;
+		line-height: 70px;
+		display: inline-block;
+	}
+}
+
+// ba-about
+
+.ba-about {
+	background: $body-background;
+	padding: 50px 0 230px;
+	h4 {
+		color: #232d3b;
+	}
+	.ba-about__descr {
+		color: $primary-color;
+		line-height: $global-lineheight;
+	}
+	.ba-about__text {
+		color: $medium-gray;
+		line-height: $global-lineheight;
+	}
+}
+
+// ba-works
+
+.ba-works {
+	background: $secondary-color;
+}
+.ba-slider-features {
+	position: relative;
+	top: -145px;
+	.ba-slide {
+		border: none;
+		outline:none;
+	}
+	.slick-dots{
+		position: absolute;
+		list-style: none;
+		top: 99%;
+		right: 0;
+		left: 0;
+		margin: auto;
+		text-align: center;
+    	padding: 0;
+
+    	li{
+    		display: inline-block;
+    		font-size: 0;
+    		padding: 3px;
+    		margin-left: 12px;
+    		button{
+    		padding: 0;
+			border: 1px solid #35817E;
+			width: 12px;
+			min-height: 12px;
+			line-height: 12px;
+			border-radius: 50%;
+			text-indent: -9999px;
+			background: #35817E;
+			transition: background .3s ease-in;
+				&:focus, &:hover{
+				background: #4B9F9B;
+				outline:none;
+				}
+			}
+
+    	}
+    	.slick-active{
+			button{
+				background-color: transparent;
 			}
 		}
 	}
