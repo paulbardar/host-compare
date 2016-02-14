@@ -70,7 +70,7 @@ button,
 [type="submit"],
 .button {
 	 @include button;
-	 width: 100px;
+	 min-width: 70px;
 	 line-height: 40px;
 	 min-height: 40px;
 	 box-shadow: 0 3px 0 darken($primary-color, 20%);
@@ -227,8 +227,21 @@ button,
 		font-size: 23px;
 		line-height: 23px;
 		padding: 0;
+		margin: 0;
 		border: none;
 		box-shadow: none;
+		&:first-of-type {
+			border-radius:5px 0 0 0;
+			@media #{breakpoint(medium)}{
+				border-radius:5px 5px 0 0;
+			}
+		}
+		&:last-of-type {
+			border-radius:0 5px 0 0;
+			@media #{breakpoint(medium)}{
+				border-radius:0;
+			}
+		}
 		.ba-cloud__link {
 			display: block;
 			padding: 20px 0;
@@ -315,7 +328,7 @@ button,
     		button{
     		padding: 0;
 			border: 1px solid #35817E;
-			width: 12px;
+			min-width: 12px;
 			min-height: 12px;
 			line-height: 12px;
 			border-radius: 50%;
