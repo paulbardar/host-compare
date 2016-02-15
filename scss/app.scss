@@ -334,6 +334,7 @@ button,
 			border-radius: 50%;
 			text-indent: -9999px;
 			background: #35817E;
+			box-shadow: none;
 			transition: background .3s ease-in;
 				&:focus, &:hover{
 				background: #4B9F9B;
