@@ -84,6 +84,7 @@ button,
 	 }
 }
 
+
 // ba-cloud
 
 .ba-cloud {
@@ -170,7 +171,6 @@ button,
 		position: relative;
 		z-index: 1;
 		display: inline-block;
-		// background: #fff;
 		margin: 0 0 0;
 	}
 }
@@ -183,7 +183,6 @@ button,
 	padding-left: 50px;
 	padding-right: 20px;
 	background: url(../img/drop.png) 100% 50% no-repeat #fff;
-
 }
 
 .ba-select__pie {
@@ -381,6 +380,11 @@ button,
 			left: 75%;
 			background: transparent url(../img/email.png) no-repeat 50%;
 			box-shadow: none;
+			&:hover {
+				transform: scale(1.5) rotate(360deg);
+				transition: .5s ease-in;
+
+			}
 			@media (max-width:430px) {
 				right: 10px;
 			}
@@ -411,6 +415,8 @@ button,
 			&:hover, &:focus, &:active{
 				background: rgba(255, 170, 22, 0.2) url(../img/rss.png) no-repeat 50%;
 				box-shadow: 0 3px darken(#ffaa16, 20%);
+				transform: scale(1.3);
+				transition: .3s ease-in;
 			}
 		}
 		&--ring{
@@ -419,6 +425,8 @@ button,
 			&:hover, &:focus, &:active{
 				background: rgba(255, 170, 22, 0.2) url(../img/ball.png) no-repeat 50%;
 				box-shadow: 0 3px darken(#ec5b95, 20%);
+				transform: scale(1.3);
+				transition: .3s ease-in;
 			}
 		}
 		&--tw{
@@ -427,6 +435,8 @@ button,
 			&:hover, &:focus, &:active{
 				background: rgba(255, 170, 22, 0.2) url(../img/tw.png) no-repeat 50%;
 				box-shadow: 0 3px darken(#00aeef, 20%);
+				transform: scale(1.3);
+				transition: .3s ease-in;
 			}
 		}
 		&--fb{
@@ -435,6 +445,8 @@ button,
 			&:hover, &:focus, &:active{
 				background: rgba(255, 170, 22, 0.2) url(../img/fb.png) no-repeat 50%;
 				box-shadow: 0 3px darken(#0054a6, 20%);
+				transform: scale(1.3);
+				transition: .3s ease-in;
 			}
 		}
 	}
