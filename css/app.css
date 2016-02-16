@@ -3529,6 +3529,13 @@ button.success,
   box-shadow: none;
 }
 
+.footer__form .form-button:hover {
+  -webkit-transform: scale(1.5) rotate(360deg);
+      -ms-transform: scale(1.5) rotate(360deg);
+          transform: scale(1.5) rotate(360deg);
+  transition: .5s ease-in;
+}
+
 @media (max-width: 430px) {
   .footer__form .form-button {
     right: 10px;
@@ -3566,6 +3573,10 @@ button.success,
 .footer .socials--rss:hover, .footer .socials--rss:focus, .footer .socials--rss:active {
   background: rgba(255, 170, 22, 0.2) url(../img/rss.png) no-repeat 50%;
   box-shadow: 0 3px #af6f00;
+  -webkit-transform: scale(1.3);
+      -ms-transform: scale(1.3);
+          transform: scale(1.3);
+  transition: .3s ease-in;
 }
 
 .footer .socials--ring {
@@ -3576,6 +3587,10 @@ button.success,
 .footer .socials--ring:hover, .footer .socials--ring:focus, .footer .socials--ring:active {
   background: rgba(255, 170, 22, 0.2) url(../img/ball.png) no-repeat 50%;
   box-shadow: 0 3px #ca175f;
+  -webkit-transform: scale(1.3);
+      -ms-transform: scale(1.3);
+          transform: scale(1.3);
+  transition: .3s ease-in;
 }
 
 .footer .socials--tw {
@@ -3586,6 +3601,10 @@ button.success,
 .footer .socials--tw:hover, .footer .socials--tw:focus, .footer .socials--tw:active {
   background: rgba(255, 170, 22, 0.2) url(../img/tw.png) no-repeat 50%;
   box-shadow: 0 3px #006489;
+  -webkit-transform: scale(1.3);
+      -ms-transform: scale(1.3);
+          transform: scale(1.3);
+  transition: .3s ease-in;
 }
 
 .footer .socials--fb {
@@ -3596,6 +3615,10 @@ button.success,
 .footer .socials--fb:hover, .footer .socials--fb:focus, .footer .socials--fb:active {
   background: rgba(255, 170, 22, 0.2) url(../img/fb.png) no-repeat 50%;
   box-shadow: 0 3px #002040;
+  -webkit-transform: scale(1.3);
+      -ms-transform: scale(1.3);
+          transform: scale(1.3);
+  transition: .3s ease-in;
 }
 
 /*# sourceMappingURL=app.css.map */
