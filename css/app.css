@@ -1684,13 +1684,13 @@ blockquote {
 
 blockquote, blockquote p {
   line-height: 1.6;
-  color: #8a8a8a;
+  color: #151c27;
 }
 
 cite {
   display: block;
   font-size: 0.92857rem;
-  color: #8a8a8a;
+  color: #151c27;
 }
 
 cite:before {
@@ -1725,7 +1725,7 @@ kbd {
   margin-bottom: 0.5rem;
   font-weight: normal;
   line-height: 1.4;
-  color: #8a8a8a;
+  color: #151c27;
 }
 
 .lead {
@@ -2756,11 +2756,11 @@ select[multiple] {
 }
 
 .orbit-bullets button:hover {
-  background-color: #8a8a8a;
+  background-color: #151c27;
 }
 
 .orbit-bullets button.is-active {
-  background-color: #8a8a8a;
+  background-color: #151c27;
 }
 
 table {
@@ -2924,8 +2924,8 @@ table.hover tr:nth-of-type(even):hover {
 }
 
 .menu-icon.dark:hover::after {
-  background: #8a8a8a;
-  box-shadow: 0 7px 0 #8a8a8a, 0 14px 0 #8a8a8a;
+  background: #151c27;
+  box-shadow: 0 7px 0 #151c27, 0 14px 0 #151c27;
 }
 
 .top-bar {
@@ -3250,14 +3250,18 @@ button.success,
 .ba-slider .slick-arrow:focus, .ba-slider .slick-arrow:active, .ba-slider .slick-arrow:hover {
   width: 60px;
   height: 60px;
+  -webkit-transform: scale(1.4);
+      -ms-transform: scale(1.4);
+          transform: scale(1.4);
+  transition: .3s ease-in;
+  -webkit-transform: rotate(30deg);
+      -ms-transform: rotate(30deg);
+          transform: rotate(30deg);
 }
 
 .ba-slider .slick-prev {
   background-image: url(../img/left.png);
   left: -60px;
-  -webkit-transform: scale(0.7);
-      -ms-transform: scale(0.7);
-          transform: scale(0.7);
 }
 
 .ba-slider .slick-next {
@@ -3489,6 +3493,109 @@ button.success,
 
 .ba-slider-features .slick-dots .slick-active button {
   background-color: transparent;
+}
+
+.footer {
+  background: #151c27;
+  padding: 60px 0 400px;
+  border-top: 22px solid #0d131a;
+}
+
+.footer__form {
+  position: relative;
+}
+
+.footer__form input {
+  background-color: #080c11;
+  display: inline-block;
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: 600;
+  height: 80px;
+  max-width: 540px;
+  padding-left: 40px;
+}
+
+.footer__form input:hover, .footer__form input:active, .footer__form input:focus {
+  transition: .3s ease-in;
+  background-color: #293d56;
+}
+
+.footer__form .form-button {
+  position: absolute;
+  top: 20px;
+  left: 75%;
+  background: transparent url(../img/email.png) no-repeat 50%;
+  box-shadow: none;
+}
+
+@media (max-width: 430px) {
+  .footer__form .form-button {
+    right: 10px;
+  }
+}
+
+.footer p {
+  font-family: 'Raleway';
+  color: #4c5c74;
+  font-size: 12px;
+  padding: 20px 0 25px;
+  margin-bottom: 0;
+  font-weight: 700;
+}
+
+.footer .socials {
+  margin: auto;
+  position: relative;
+}
+
+.footer .socials > .button {
+  margin-right: 5px;
+  line-height: 50px;
+  min-height: 55px;
+  min-width: 64px;
+  border-radius: 2px;
+  padding: 0;
+}
+
+.footer .socials--rss {
+  background: #ffaa16 url(../img/rss.png) no-repeat 50%;
+  box-shadow: 0 3px #af6f00;
+}
+
+.footer .socials--rss:hover, .footer .socials--rss:focus, .footer .socials--rss:active {
+  background: rgba(255, 170, 22, 0.2) url(../img/rss.png) no-repeat 50%;
+  box-shadow: 0 3px #af6f00;
+}
+
+.footer .socials--ring {
+  background: #ec5b95 url(../img/ball.png) no-repeat 50%;
+  box-shadow: 0 3px #ca175f;
+}
+
+.footer .socials--ring:hover, .footer .socials--ring:focus, .footer .socials--ring:active {
+  background: rgba(255, 170, 22, 0.2) url(../img/ball.png) no-repeat 50%;
+  box-shadow: 0 3px #ca175f;
+}
+
+.footer .socials--tw {
+  background: #00aeef url(../img/tw.png) no-repeat 50%;
+  box-shadow: 0 3px #006489;
+}
+
+.footer .socials--tw:hover, .footer .socials--tw:focus, .footer .socials--tw:active {
+  background: rgba(255, 170, 22, 0.2) url(../img/tw.png) no-repeat 50%;
+  box-shadow: 0 3px #006489;
+}
+
+.footer .socials--fb {
+  background: #0054a6 url(../img/fb.png) no-repeat 50%;
+  box-shadow: 0 3px #002040;
+}
+
+.footer .socials--fb:hover, .footer .socials--fb:focus, .footer .socials--fb:active {
+  background: rgba(255, 170, 22, 0.2) url(../img/fb.png) no-repeat 50%;
+  box-shadow: 0 3px #002040;
 }
 
 /*# sourceMappingURL=app.css.map */
