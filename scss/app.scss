@@ -143,12 +143,15 @@ button,
 		&:focus, &:active, &:hover {
 			width: 60px;
 			height: 60px;
+			transform: scale(1.4);
+			transition:  .3s ease-in;
+			transform: rotate(30deg);
 		}
 	}
 	.slick-prev{
 		background-image: url(../img/left.png);
 		left: -60px;
-		transform: scale(0.7);
+
 
 	}
 
@@ -351,3 +354,89 @@ button,
 		}
 	}
 }
+
+.footer {
+	background: $dark-gray;
+	padding: 60px 0 400px;
+	border-top:22px solid #0d131a;
+	&__form {
+		position: relative;
+		input {
+		background-color: #080c11;
+		display: inline-block;
+		color:  #ffffff;
+		font-size: 18px;
+		font-weight: 600;
+		height: 80px;
+		max-width: 540px;
+		padding-left: 40px;
+			&:hover, &:active, &:focus {
+				transition: .3s ease-in;
+				background-color: lighten(#080c11, 20%);
+			}
+		}
+		.form-button {
+			position: absolute;
+			top: 20px;
+			left: 75%;
+			background: transparent url(../img/email.png) no-repeat 50%;
+			box-shadow: none;
+			@media (max-width:430px) {
+				right: 10px;
+			}
+		}
+	}
+	p {
+		font-family: 'Raleway';
+		color: #4c5c74;
+		font-size: 12px;
+		padding: 20px 0 25px;
+		margin-bottom: 0;
+		font-weight: 700;
+	}
+	.socials {
+		margin: auto;
+		position: relative;
+		> .button {
+			margin-right: 5px;
+			line-height: 50px;
+			min-height: 55px;
+    		min-width: 64px;
+    		border-radius: 2px;
+    		padding: 0;
+		}
+		&--rss{
+			background: #ffaa16 url(../img/rss.png) no-repeat 50%;
+			box-shadow: 0 3px darken(#ffaa16, 20%);
+			&:hover, &:focus, &:active{
+				background: rgba(255, 170, 22, 0.2) url(../img/rss.png) no-repeat 50%;
+				box-shadow: 0 3px darken(#ffaa16, 20%);
+			}
+		}
+		&--ring{
+			background: #ec5b95 url(../img/ball.png) no-repeat 50%;
+			box-shadow: 0 3px darken(#ec5b95, 20%);
+			&:hover, &:focus, &:active{
+				background: rgba(255, 170, 22, 0.2) url(../img/ball.png) no-repeat 50%;
+				box-shadow: 0 3px darken(#ec5b95, 20%);
+			}
+		}
+		&--tw{
+			background: #00aeef url(../img/tw.png) no-repeat 50%;
+			box-shadow: 0 3px darken(#00aeef, 20%);
+			&:hover, &:focus, &:active{
+				background: rgba(255, 170, 22, 0.2) url(../img/tw.png) no-repeat 50%;
+				box-shadow: 0 3px darken(#00aeef, 20%);
+			}
+		}
+		&--fb{
+			background: #0054a6 url(../img/fb.png) no-repeat 50%;
+			box-shadow: 0 3px darken(#0054a6, 20%);
+			&:hover, &:focus, &:active{
+				background: rgba(255, 170, 22, 0.2) url(../img/fb.png) no-repeat 50%;
+				box-shadow: 0 3px darken(#0054a6, 20%);
+			}
+		}
+	}
+}
+
