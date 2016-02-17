@@ -1,4 +1,5 @@
 ;(function($){
+  $(document).foundation();
 	$(function(){
   		var slider = $('.ba-slider');
   		slider.slick({
@@ -22,16 +23,4 @@
   		});
  	});
 
-  var menuToggle = document.getElementById("ba-menu-toggle"),
-    body = document.body;
-
-  menuToggle.onclick = function(event){
-    event.preventDefault();
-    if(body.className === "ba-menu-opened"){
-      body.className = "";
-    } else {
-      body.className = "ba-menu-opened";
-    }
-
-  }
 })(jQuery);
